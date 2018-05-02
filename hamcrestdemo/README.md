@@ -1,0 +1,1 @@
+Harmcrest demo for blog article http://www.istarx.cc/2018/02/11/hamcrest-matcher/
