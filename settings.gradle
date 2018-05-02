@@ -1,2 +1,2 @@
-include ':writeunittestdemo', ':mockitodemo', ':espressodemo', ':hamcrestdemo', ':productflavordemo', ':proguarddemo'
+include ':writeunittestdemo', ':mockitodemo', ':espressodemo', ':hamcrestdemo', ':productflavordemo', ':proguarddemo', ':uiautomatordemo'
 
