@@ -1,0 +1,1 @@
+A ProGuard demo with article http://www.istarx.cc/2018/04/19/android-proguard .
