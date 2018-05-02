@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "cc.istarx.productflavordemo"
+        minSdkVersion 26
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        demo {
+            debuggable true
+            shrinkResources true // 是否清理无用资源,依赖于minifyEnabled
+            applicationIdSuffix '.buildTypeDemo'
+            initWith debug
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            applicationIdSuffix '.debug'
+            // signingConfig signingConfigs.release
+        }
+
+        release {
+            debuggable false
+            minifyEnabled true // 启用Proguard
+            zipAlignEnabled true // 是否启用zipAlign压缩
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix '.release'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    def modeDimension = 'mode'
+    def addressDimension = 'address'
+    def freeFlavorName = 'free'
+    def chargeFlavorName = 'charge'
+    def shanXiFlavorName = 'shanXi'
+    def beiJingFlavorName = 'beiJing'
+    def shanDongFlavorName = 'shanDong'
+    flavorDimensions "${addressDimension}", "${modeDimension}"
+    productFlavors {
+        free {
+            dimension "${modeDimension}"
+            versionNameSuffix "-${freeFlavorName}"
+        }
+
+        charge {
+            dimension "${modeDimension}"
+            versionNameSuffix "-${chargeFlavorName}"
+        }
+
+        shanXi {
+            dimension "${addressDimension}"
+            minSdkVersion 24
+            versionCode 24000 + android.defaultConfig.versionCode
+            versionNameSuffix "-${shanXiFlavorName}"
+        }
+
+        beiJing {
+            dimension "${addressDimension}"
+            minSdkVersion 25
+            versionCode 25000 + android.defaultConfig.versionCode
+            versionNameSuffix "-${beiJingFlavorName}"
+        }
+
+        shanDong {
+            dimension "${addressDimension}"
+            minSdkVersion 26
+            versionCode 26000 + android.defaultConfig.versionCode
+            versionNameSuffix "-${shanDongFlavorName}"
+        }
+    }
+
+    def flavorNames = ["beiJingchargedemo", "shanDongfreedebug", "shanXichargedemo"]
+    variantFilter { variant ->
+        def names = variant.flavors*.name
+        def name = ''
+        for(String str: names) {
+            name += str
+        }
+        if (!flavorNames.contains(name + variant.buildType.name)) {
+            // Gradle ignores any variants that satisfy the conditions above.
+            setIgnore(true)
+        }
+    }
+
+    sourceSets {
+        shanXiChargeDemo {
+            java.srcDirs = ['src/shanXiChargeDemoSpecialDir/java']
+            res.srcDirs = ['src/shanXiChargeDemoSpecialDir/res']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    // implementation files('0.jar')
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cc.istarx.productflavordemo.ProductFlavorDemoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:id="@+id/layout_beiJing">
+        <TextView
+            android:id="@+id/beiJingFlavorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/beiJingFlavorName" />
+
+        <TextView
+            android:id="@+id/beiJingFlavorDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/beiJingFlavorDesc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/layout_shanDong">
+        <TextView
+            android:id="@+id/shanDongFlavorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shanDongFlavorName"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/shanDongFlavorDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shanDongFlavorDesc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/layout_shanXi">
+        <TextView
+            android:id="@+id/shanXiFlavorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shanXiFlavorName"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/shanXiFlavorDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shanXiFlavorDesc" />
+    </LinearLayout>
+</LinearLayout>

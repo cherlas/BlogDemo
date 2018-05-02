@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProductFlavorDemo</string>
+
+    <string name="beiJingFlavorName">beiJingChargeDemo:</string>
+    <string name="beiJingFlavorDesc">flavor description</string>
+
+    <string name="shanDongFlavorName">shanDongFreeDebug:</string>
+    <string name="shanDongFlavorDesc">flavor description</string>
+
+    <string name="shanXiFlavorName">shanXiChargeDemo:</string>
+    <string name="shanXiFlavorDesc">flavor description</string>
+</resources>
