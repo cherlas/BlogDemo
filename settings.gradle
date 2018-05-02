@@ -1,2 +1,2 @@
-include ':writeunittestdemo', ':mockitodemo'
+include ':writeunittestdemo', ':mockitodemo', ':espressodemo'
 
