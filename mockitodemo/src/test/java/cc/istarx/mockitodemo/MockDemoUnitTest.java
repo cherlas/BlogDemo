@@ -5,10 +5,14 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.InOrder;
 import org.mockito.Mockito;
 import org.mockito.exceptions.verification.NoInteractionsWanted;
+import org.mockito.internal.verification.api.VerificationData;
+import org.mockito.verification.Timeout;
+import org.mockito.verification.VerificationMode;
 
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.argThat;
@@ -17,16 +21,20 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.atMost;
 import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.doCallRealMethod;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.timeout;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.withSettings;
 
 public class MockDemoUnitTest {
 
@@ -223,5 +231,46 @@ public class MockDemoUnitTest {
         when(student.getName()).thenAnswer(invocation -> "default value");
 
         assertEquals("default value", student.getName());
+    }
+
+    @Test
+    public void serializableMockTest() {
+        Student student = mock(Student.class, withSettings().serializable());
+        assertNotNull(student);
+    }
+
+    @Test
+    public void resetMockTest() {
+        Student student = mock(Student.class);
+        doNothing().when(student).setScore(99);
+        student.setScore(99);
+        reset(student);
+    }
+
+    @Test
+    public void timeoutTest() {
+        TimeoutDemo demo = mock(TimeoutDemo.class);
+
+        doCallRealMethod().when(demo).timeoutMethod();
+        demo.timeoutMethod();
+
+
+        // 延迟 200ms 再验证该方法是否执行过
+        verify(demo,timeout(200)).timeoutMethod();
+        // 等价与下面这句
+        verify(demo, timeout(200).times(1)).timeoutMethod();
+
+        // 自定义验证模式
+        verify(demo,new Timeout(200, new VerificationMode() {
+            @Override
+            public void verify(VerificationData data) {
+                // custom verify mode
+            }
+
+            @Override
+            public VerificationMode description(String description) {
+                return null;
+            }
+        })).timeoutMethod();
     }
 }
