@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+
+
+
+    defaultConfig {
+        applicationId "cc.istarx.powermockdemo"
+        minSdkVersion 26
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+
+    // powermock framework
+    def powerMockVersion = '2.0.0-beta.5'
+    // powermock junit4
+    testImplementation "org.powermock:powermock-module-junit4:${powerMockVersion}"
+    // powermock with mockito2
+    testImplementation "org.powermock:powermock-api-mockito2:${powerMockVersion}"
+    // powermock with easymock
+    testImplementation "org.powermock:powermock-api-easymock:${powerMockVersion}"
+}
