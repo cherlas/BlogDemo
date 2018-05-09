@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RobolectricDemo</string>
+    <string name="login_activity_res">This is login activity.</string>
+</resources>
