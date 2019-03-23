@@ -1,4 +1,4 @@
-package cc.istarx.writeunittestdemo;
+package cn.istarx.writeunittestdemo;
 
 public class BoundaryDemo {
 

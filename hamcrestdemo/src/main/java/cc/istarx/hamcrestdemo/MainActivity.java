@@ -1,4 +1,4 @@
-package cc.istarx.hamcrestdemo;
+package cn.istarx.hamcrestdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

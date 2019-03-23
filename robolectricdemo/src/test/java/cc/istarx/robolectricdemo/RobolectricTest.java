@@ -1,4 +1,4 @@
-package cc.istarx.robolectricdemo;
+package cn.istarx.robolectricdemo;
 
 import android.content.Context;
 import android.content.Intent;
@@ -141,7 +141,7 @@ public class RobolectricTest {
 
     @Test
     public void receiverTest() {
-        Intent intent = new Intent("cc.istarx.MyReceiver");
+        Intent intent = new Intent("cn.istarx.MyReceiver");
         intent.putExtra("receiver_test", "Receiver Test");
 
         MyReceiver receiver = new MyReceiver();

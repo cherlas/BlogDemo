@@ -1,4 +1,4 @@
-package cc.istarx.writeunittestdemo;
+package cn.istarx.writeunittestdemo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("cc.istarx.writeunittestdemo", appContext.getPackageName());
+        assertEquals("cn.istarx.writeunittestdemo", appContext.getPackageName());
     }
 }

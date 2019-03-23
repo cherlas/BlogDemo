@@ -1,4 +1,4 @@
-package cc.istarx.mockitodemo;
+package cn.istarx.mockitodemo;
 
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;

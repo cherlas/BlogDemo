@@ -1,4 +1,4 @@
-package cc.istarx.proguarddemo.dummy;
+package cn.istarx.proguarddemo.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

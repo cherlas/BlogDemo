@@ -1,4 +1,4 @@
-package cc.istarx.espressodemo;
+package cn.istarx.espressodemo;
 
 import android.app.Activity;
 import android.app.Instrumentation;
@@ -96,8 +96,8 @@ public class ExampleInstrumentedTest {
         onView(withId(R.id.login)).perform(click());
 
         intended(allOf(
-                toPackage("cc.istarx.espressodemo"),
-                not(hasAction("cc.istarx.test.action")),
+                toPackage("cn.istarx.espressodemo"),
+                not(hasAction("cn.istarx.test.action")),
                 hasExtras(allOf(
                         hasEntry(equalTo("email"), equalTo(EMAIL)),
                         hasEntry(equalTo("password"), equalTo(PASSWORD))
@@ -112,7 +112,7 @@ public class ExampleInstrumentedTest {
         Instrumentation.ActivityResult result =
                 new Instrumentation.ActivityResult(Activity.RESULT_OK, resultData);
 
-        intending(toPackage("cc.istarx.espressodemo")).respondWith(result);
+        intending(toPackage("cn.istarx.espressodemo")).respondWith(result);
 
         onView(withId(R.id.intending_button)).perform(click());
         onView(withId(R.id.result_text)).check(matches(allOf(isDisplayed(),withText(testStr))));

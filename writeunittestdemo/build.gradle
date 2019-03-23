@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "cc.istarx.writeunittestdemo"
+        applicationId "cn.istarx.writeunittestdemo"
         minSdkVersion 26
         targetSdkVersion 27
         versionCode 1

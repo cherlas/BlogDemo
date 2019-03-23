@@ -1,4 +1,4 @@
-package cc.istarx.powermockdemo;
+package cn.istarx.powermockdemo;
 
 public class WhiteboxDemo {
     private static WhiteboxDemo demo;

@@ -1,4 +1,4 @@
-package cc.istarx.proguarddemo;
+package cn.istarx.proguarddemo;
 
 import android.app.Activity;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import cc.istarx.proguarddemo.dummy.DummyContent;
+import cn.istarx.proguarddemo.dummy.DummyContent;
 
 /**
  * A fragment representing a single Item detail screen.

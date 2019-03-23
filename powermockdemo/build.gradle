@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "cc.istarx.powermockdemo"
+        applicationId "cn.istarx.powermockdemo"
         minSdkVersion 26
         targetSdkVersion 27
         versionCode 1

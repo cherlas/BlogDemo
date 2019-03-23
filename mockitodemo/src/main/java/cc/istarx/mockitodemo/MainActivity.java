@@ -1,4 +1,4 @@
-package cc.istarx.mockitodemo;
+package cn.istarx.mockitodemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

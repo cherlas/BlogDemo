@@ -1,4 +1,4 @@
-package cc.istarx.powermockdemo;
+package cn.istarx.powermockdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

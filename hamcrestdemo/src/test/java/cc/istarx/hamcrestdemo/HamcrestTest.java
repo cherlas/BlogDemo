@@ -1,4 +1,4 @@
-package cc.istarx.hamcrestdemo;
+package cn.istarx.hamcrestdemo;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,8 +8,8 @@ import org.junit.runners.JUnit4;
 import java.util.ArrayList;
 import java.util.List;
 
-import static cc.istarx.hamcrestdemo.IsExceptedStringMatcher.isExceptedString;
-import static cc.istarx.hamcrestdemo.IsStrongPassword.isStrongPassword;
+import static cn.istarx.hamcrestdemo.IsExceptedStringMatcher.isExceptedString;
+import static cn.istarx.hamcrestdemo.IsStrongPassword.isStrongPassword;
 import static org.hamcrest.CoreMatchers.anyOf;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;

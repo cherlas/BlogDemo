@@ -1,4 +1,4 @@
-package cc.istarx.uiautomator;
+package cn.istarx.uiautomator;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cc.istarx.robolectricdemo">
+    package="cn.istarx.robolectricdemo">
 
     <application
         android:allowBackup="true"
@@ -28,7 +28,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="cc.istarx.MyReceiver"/>
+                <action android:name="cn.istarx.MyReceiver"/>
             </intent-filter>
         </receiver>
     </application>

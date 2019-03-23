@@ -1,4 +1,4 @@
-package cc.istarx.robolectricdemo;
+package cn.istarx.robolectricdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

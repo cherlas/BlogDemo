@@ -1,4 +1,4 @@
-package cc.istarx.proguarddemo;
+package cn.istarx.proguarddemo;
 
 import android.content.Intent;
 import android.os.Bundle;

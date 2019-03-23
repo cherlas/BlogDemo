@@ -1,4 +1,4 @@
-package cc.istarx.hamcrestdemo;
+package cn.istarx.hamcrestdemo;
 
 import org.hamcrest.Description;
 import org.hamcrest.Factory;

@@ -1,4 +1,4 @@
-package cc.istarx.espressodemo;
+package cn.istarx.espressodemo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,7 +36,7 @@ public class EspressoDemoActivity extends AppCompatActivity {
         });
 
         intendingTestButton.setOnClickListener((v) -> {
-            Intent intent  = new Intent("cc.istarx.espressodemo.customaction");
+            Intent intent  = new Intent("cn.istarx.espressodemo.customaction");
             startActivityForResult(intent, REQUEST_CODE);
         });
     }

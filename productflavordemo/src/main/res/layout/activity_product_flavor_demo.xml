@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="cc.istarx.productflavordemo.ProductFlavorDemoActivity">
+    tools:context="cn.istarx.productflavordemo.ProductFlavorDemoActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

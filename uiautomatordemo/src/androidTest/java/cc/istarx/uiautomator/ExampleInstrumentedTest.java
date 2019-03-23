@@ -1,4 +1,4 @@
-package cc.istarx.uiautomator;
+package cn.istarx.uiautomator;
 
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
@@ -22,7 +22,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
 
-    private static final String PKG = "cc.istarx.uiautomator";
+    private static final String PKG = "cn.istarx.uiautomator";
     private static final String EMAIL = "istarx@163.com";
     private static final String PASSWORD = "istarx.cc";
     private static final int TIMEOUT = 3000;

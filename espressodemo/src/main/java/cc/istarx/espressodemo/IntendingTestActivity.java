@@ -1,4 +1,4 @@
-package cc.istarx.espressodemo;
+package cn.istarx.espressodemo;
 
 import android.content.Intent;
 import android.os.Bundle;

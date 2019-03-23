@@ -1,4 +1,4 @@
-package cc.istarx.productflavordemo;
+package cn.istarx.productflavordemo;
 
 /**
  * Created by cherlas on 2018/2/9.

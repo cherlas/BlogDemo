@@ -1,4 +1,4 @@
-package cc.istarx.writeunittestdemo;
+package cn.istarx.writeunittestdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

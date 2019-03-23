@@ -1,4 +1,4 @@
-package cc.istarx.robolectricdemo;
+package cn.istarx.robolectricdemo;
 
 
 import android.content.ContentResolver;

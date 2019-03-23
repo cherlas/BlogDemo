@@ -1,4 +1,4 @@
-package cc.istarx.robolectricdemo;
+package cn.istarx.robolectricdemo;
 
 import org.junit.runners.model.InitializationError;
 import org.robolectric.RoboSettings;

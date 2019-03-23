@@ -1,4 +1,4 @@
-package cc.istarx.powermockdemo;
+package cn.istarx.powermockdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,9 +30,9 @@ import static org.powermock.api.support.membermodification.MemberModifier.suppre
 
 @RunWith(PowerMockRunner.class)
 //@PrepareForTest()
-@PowerMockIgnore({"cc.istarx.*","android.*"})
+@PowerMockIgnore({"cn.istarx.*","android.*"})
 // 屏蔽静态初始化块
-@SuppressStaticInitializationFor("cc.istarx.powermockdemo.SuppressDemo")
+@SuppressStaticInitializationFor("cn.istarx.powermockdemo.SuppressDemo")
 public class ExamplePowerMockTest {
 
     @Test
