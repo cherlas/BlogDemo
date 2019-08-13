@@ -1,11 +1,8 @@
 package cn.istarx.robolectricdemo;
 
-import android.app.Dialog;
 import android.app.IntentService;
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.util.Log;
-import android.widget.Toast;
+import androidx.annotation.Nullable;
 
 public class MyService extends IntentService {
     public MyService() {
