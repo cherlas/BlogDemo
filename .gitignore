@@ -8,3 +8,7 @@
 /.idea
 
 
+
+# Project exclude paths
+/BubbleDemo/build/
+/BubbleDemo/build/intermediates/javac/debug/classes/

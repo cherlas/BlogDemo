@@ -1,2 +1,2 @@
 include ':writeunittestdemo', ':mockitodemo', ':espressodemo', ':hamcrestdemo', ':productflavordemo', ':proguarddemo', ':uiautomatordemo', ':powermockdemo', ':robolectricdemo'
-
+include ':BubbleDemo'
